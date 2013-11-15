@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.screenshots  = "https://dl.dropboxusercontent.com/u/73895323/MMPickerView-GitHub.png"
   s.license      = 'MIT'
   s.author       = { "Madjid Mahdjoubi" => "mail@madjid.se" }
-  s.source       = { :git => "https://github.com/Duffpod/MMPickerView.git", :tag => s.version }
+  s.source       = { :git => "https://github.com/Duffpod/MMPickerView.git", :tag => "#{s.version}" }
   s.platform     = :ios, '6.1'
   s.source_files = 'MMPickerView/*.{h,m}'
   s.framework  = 'CoreGraphics'
