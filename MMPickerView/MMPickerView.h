@@ -16,8 +16,6 @@ extern NSString * const MMfont;
 extern NSString * const MMvalueY;
 extern NSString * const MMselectedObject;
 extern NSString * const MMtoolbarBackgroundImage;
-extern NSString * const MMtextAlignment;
-extern NSString * const MMshowsSelectionIndicator;
 
 @interface MMPickerView: UIView 
 
@@ -32,6 +30,13 @@ extern NSString * const MMshowsSelectionIndicator;
     objectToStringConverter: (NSString *(^)(id object))converter
        completion: (void(^)(id selectedObject))completion;
 
-+(void)dismissWithCompletion: (void(^)(NSString *))completion;
++(void)showPickerViewInView: (UIView *)view
+                withObjects: (NSArray *)objects
+                withOptions: (NSDictionary *)options
+    objectToStringConverter: (NSString *(^)(id object))converter
+                 completion: (void(^)(id selectedObject))completion
+                     cancel:(void(^)())cancel;
+
++(void)dismissWithCompletion:(void (^)(NSString *))completion cancellation:(void(^)())cancellation;
 
 @end
